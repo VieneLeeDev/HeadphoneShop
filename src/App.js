@@ -1,5 +1,5 @@
 import './App.css';
-import DefaultLayout from './Layouts/DefaultlaOut/DefaultLayout';
+import DefaultLayout from './Layouts/Defaultlayout/DefaultLayout';
 function App() {
   return (
     <div className="App">
