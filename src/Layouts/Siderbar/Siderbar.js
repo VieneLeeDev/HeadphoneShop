@@ -9,6 +9,7 @@ function Siderbar(){
                 <button className="button_sider">Trang chủ</button>
                 <button className="button_sider">Diễn đàn</button>
                 <button className="button_sider">Tin tức</button>
+                <button className="button_sider">Liên hệ</button>
             </div>
             <div className="signin_signout"> 
                 <button className="button_sign">Đăng nhập </button>
