@@ -1,17 +1,10 @@
+
 .container-slider{
-    width: 80%;
+    display: flex;
     height: 100%;
+    background-color: rgb(129, 137, 143);
 }
 img{
-    max-width: 100%;
+    width: 100%;
     max-height: 100%;
-}
-.item_slide{
-
-}
-.item_hide{
-    position: absolute;
-    display: none;
-}
-.item_slide::before{
 }
