@@ -1,0 +1,7 @@
+.show-item{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,auto));
+    gap: 1.5rem;
+    margin-top: 100px;
+    justify-content: space-between;
+}

@@ -1,5 +1,41 @@
 .container-cart{
-    width: 80px;
-    height: 100px;
-    background-color: red;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 400px;
+    font-size: 20px;
+    justify-content: space-between;
+    box-shadow: 0 5px 10px 0 black;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.container-cart:hover{
+    opacity: 0.8;
+    border-radius: 3px;
+    box-shadow: 0 5px 10px 0 black;
+
+}
+.title_price{
+    height: 100%;
+    background-color: rgb(162, 151, 151);
+}
+.img_item{
+    height: 90%;
+}
+img{
+    max-height: 100%;
+    max-width: 100%;
+}
+.name_item{
+    font-weight: 500;
+    color: #222;
+    margin: 13px;
+    height: 15%;
+}
+.price_item{
+    height: 15%;
+    color: #df2d00;
+    font-size: 20px;
+    font-weight: 900;
+    font-family: 'Roboto', sans-serif;
 }

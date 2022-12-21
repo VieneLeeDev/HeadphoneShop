@@ -9,23 +9,7 @@ function DefaultLayout ({children}){
                 <Siderbar/>
             </div>
             <div className='content-container'>
-                <div className='content'>
-                    <div className="slider">
-                        <SliderItem/>
-                    </div>
-                    <div className='show-item'>
-                            <CartItem/>
-                            <CartItem/>
-                            <CartItem/>
-                            <CartItem/>
-                            <CartItem/>
-                            <CartItem/>
-                            <CartItem/>
-                            <CartItem/>
-                            <CartItem/>
-                            <CartItem/>
-                    </div>
-                </div>
+                {children}
             </div>
             
         </div>
