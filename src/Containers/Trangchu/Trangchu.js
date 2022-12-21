@@ -9,6 +9,8 @@ function Trangchu(){
                         <SliderItem/>
             </div>
             <div className='show-item'>
+                <div className="best_seller_part">
+                <div className="item_best_seller">
                 <CartItem/>
                 <CartItem/>
                 <CartItem/>
@@ -17,6 +19,9 @@ function Trangchu(){
                 <CartItem/>
                 <CartItem/>
                 <CartItem/>
+            </div>
+                </div>
+                
             </div>
         </DefaultLayout>
     )

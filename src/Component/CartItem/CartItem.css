@@ -10,6 +10,7 @@
     cursor: pointer;
 }
 .container-cart:hover{
+    transform: scale(1.05);
     opacity: 0.8;
     border-radius: 3px;
     box-shadow: 0 5px 10px 0 black;
