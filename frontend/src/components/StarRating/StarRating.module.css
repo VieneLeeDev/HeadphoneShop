@@ -1,0 +1,17 @@
+.StarRating__Container{
+    height: 15px;
+}
+.main__star{
+    height: 100%;
+    background: none;
+    border: none;
+}
+.main__star:hover{
+    cursor: pointer;
+}
+.on{
+    color: #000;
+}
+.off{
+    color: #ccc;
+}

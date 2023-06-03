@@ -1,0 +1,92 @@
+.header{
+    position: fixed;
+    display: flex;
+    height: 80px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 30px;
+    background-color: #000002;
+}
+.logo-navigation{
+  height: 100%;
+  width: 100px;
+}
+.top-navigation-main{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.main-navigation{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+.header img{
+    max-width: 100%;
+    height: 100%;
+}
+.search-input-field{
+    width: 100px;
+    height: 90%;
+    background-color: aliceblue;
+    max-height: 100%;
+    text-decoration-line: none;
+    outline: none;
+    border: none;
+    transition: 1s;
+}
+.search-input-field:focus{
+    width: 300px;
+}
+.search-input-box {
+    display: flex;
+    align-items: center;
+    background-color: aliceblue;
+    height: 30px;
+    border-radius: 30px;
+    padding: 0 10px 0 15px;
+}
+.search-input-box:hover{
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.search-input-box img{
+    max-width: 50%;
+    max-height: 50%;
+}
+.top-level-entry, .login-button{
+    display: flex;
+    height: 50px;
+    margin: 0 10px;
+    background-color: #000002;
+    color: wheat;
+    border: none;
+    border-radius: 3px;
+    font-size: 17px;
+    transition: 0.2s;
+    align-items: center;
+    text-decoration-line: none;
+}
+.top-level-entry:hover , .login-button:hover{
+    color: #000002;
+    background-color: wheat;
+    cursor: pointer;
+}
+.box-button-login{
+    display: flex;
+}
+.category{
+    height: 50px;   
+        width: 50px;
+
+}
+.category:hover{
+    cursor: pointer;
+    opacity: 0.5;
+}
+.category img{
+    width: 100%;
+    height: 80%;
+}
