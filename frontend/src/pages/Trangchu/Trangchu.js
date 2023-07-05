@@ -4,7 +4,7 @@ import Login from "../Login/Login";
 import panner from "../../assets/img/panner.png";
 import Card from "../../components/Card/Card";
 import Navbar from "../../components/Navbar/Navbar";
-import products from "../data";
+import { products } from "../data";
 
 function Trangchu() {
   const [showModalLogin, setShowModalLogin] = useState(false);
@@ -27,15 +27,15 @@ function Trangchu() {
               </div>
               <ul>
                 <li className={styles["checkbox-content"]}>
-                  <input type="checkbox"/>
+                  <input type="checkbox" />
                   <span>Nam </span>
                 </li>
                 <li className={styles["checkbox-content"]}>
-                 <input type="checkbox"/>
+                  <input type="checkbox" />
                   <span>Nữ </span>
                 </li>
                 <li className={styles["checkbox-content"]}>
-                 <input type="checkbox"/>
+                  <input type="checkbox" />
                   <span>Khác </span>
                 </li>
               </ul>
@@ -46,23 +46,23 @@ function Trangchu() {
               </div>
               <ul>
                 <li className={styles["checkbox-content"]}>
-                 <input type="checkbox"/>
+                  <input type="checkbox" />
                   <span>Thể thao</span>
                 </li>
                 <li className={styles["checkbox-content"]}>
-                 <input type="checkbox"/>
+                  <input type="checkbox" />
                   <span>Thời trang</span>
                 </li>
                 <li className={styles["checkbox-content"]}>
-                 <input type="checkbox"/>
+                  <input type="checkbox" />
                   <span>Hiện đại</span>
                 </li>
                 <li className={styles["checkbox-content"]}>
-                 <input type="checkbox"/>
+                  <input type="checkbox" />
                   <span>Cổ điển</span>
                 </li>
                 <li className={styles["checkbox-content"]}>
-                 <input type="checkbox"/>
+                  <input type="checkbox" />
                   <span>Không dây (wireless)</span>
                 </li>
               </ul>
@@ -73,19 +73,19 @@ function Trangchu() {
               </div>
               <ul>
                 <li className={styles["checkbox-content"]}>
-                 <input type="checkbox"/>
+                  <input type="checkbox" />
                   <span>0 - 500.000đ</span>
                 </li>
                 <li className={styles["checkbox-content"]}>
-                 <input type="checkbox"/>
+                  <input type="checkbox" />
                   <span>500.000đ - 1.500.000đ</span>
                 </li>
                 <li className={styles["checkbox-content"]}>
-                 <input type="checkbox"/>
+                  <input type="checkbox" />
                   <span>1.500.000đ - 3.000.000đ</span>
                 </li>
                 <li className={styles["checkbox-content"]}>
-                 <input type="checkbox"/>
+                  <input type="checkbox" />
                   <span> &#62; 3.000.000đ</span>
                 </li>
               </ul>

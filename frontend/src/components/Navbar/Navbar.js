@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/img/logo.jpg";
-import clsx  from "clsx";
+import clsx from "clsx";
 import search_icon from "../../assets/icon/search_icon.svg";
 import styles from "./Navbar.module.css";
 import icon_category from "../../assets/icon/icon_category.jpg";
@@ -18,8 +18,8 @@ function Navbar({ handleShowModalLogin }) {
           <Link to={"/congdong"} className={styles["top-level-entry"]}>
             Cộng Đồng
           </Link>
-          <Link to={"/thamkhao"} className={styles["top-level-entry"]}>
-            Tham Khảo
+          <Link to={"/Dashboard"} className={styles["top-level-entry"]}>
+            Quản lý
           </Link>
         </div>
         <div className={styles["search-input-box"]}>
@@ -35,7 +35,7 @@ function Navbar({ handleShowModalLogin }) {
             Đăng Nhập
           </button>
           <button className={styles["login-button"]}> Đăng Ký </button>
-          <Link to="/Category" className={clsx( styles.category)}>
+          <Link to="/Category" className={clsx(styles.category)}>
             {" "}
             <img src={icon_category} alt="" />{" "}
           </Link>

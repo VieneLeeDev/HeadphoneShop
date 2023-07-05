@@ -1,6 +1,8 @@
-import "./Admin.module.css";
-
-const Admin = () => {
-  return;
+function Admin() {
+  return (
+    <>
+      <div>Admin</div>
+    </>
+  );
 }
 export default Admin;

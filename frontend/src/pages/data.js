@@ -4,6 +4,9 @@ import item_02 from "../assets/img/item_002.webp";
 import item_04 from "../assets/img/item_004.webp";
 import item_05 from "../assets/img/item_005.webp";
 import item_06 from "../assets/img/item_006.webp";
+import emplyee_1 from "../assets/img/employee_1.jpg";
+import emplyee_2 from "../assets/img/employee_2.jpg";
+import emplyee_3 from "../assets/img/employee_3.webp";
 const products = [
   {
     id: "1",
@@ -38,7 +41,7 @@ const products = [
     img: item_01,
   },
   {
-    id:"5",
+    id: "5",
     nameItem: "Motorola Pulse Bass 200 (có dây)",
     description:
       "Motorola Pulse bass 200 nghe nói có chất âm ấm áp ấn tượng và thiết kế phong cách. Điểm tuyệt vời của chiếc tai nghe còn nhiều hơn thế đang chờ đợi bạn cùng khám phá. Hãy xem đoạn mô tả sau để hiểu rõ về chiếc tai nghe xinh đẹp này nhé!",
@@ -55,4 +58,33 @@ const products = [
   },
 ];
 
-export default products;
+const employess = [
+  {
+    avatar: emplyee_1,
+    firstName: "David",
+    lastName: "Jamil",
+    department: "Manager",
+    gender: "Female",
+    email: "Jamil@Email.com",
+    phoneNumber: "0822641415",
+  },
+  {
+    avatar: emplyee_2,
+    firstName: "Justin",
+    lastName: "Jodan",
+    department: "Manager",
+    gender: "Male",
+    email: "Jodan@Email.com",
+    phoneNumber: "082123445",
+  },
+  {
+    avatar: emplyee_3,
+    firstName: "Thomas",
+    lastName: "Jevevermind",
+    department: "Manager",
+    gender: "Male",
+    email: "Jevevermind@Email.com",
+    phoneNumber: "09907966860",
+  },
+];
+export { products, employess };

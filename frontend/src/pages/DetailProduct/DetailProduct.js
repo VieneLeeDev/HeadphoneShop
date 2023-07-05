@@ -1,5 +1,5 @@
 import styles from "./DetailProduct.module.css";
-import products from "../data";
+import { products } from "../data";
 import { useParams } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar";
 import StarRating from "../../components/StarRating/StarRating";
@@ -21,7 +21,7 @@ function DetailProduct() {
               </h1>{" "}
               <div className={styles["rate_product"]}>
                 <div className={styles.box__rate}>
-                <StarRating />
+                  <StarRating />
                 </div>
                 <span className={styles.reviewers}> 120 Reviews</span>
               </div>
