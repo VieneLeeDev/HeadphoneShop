@@ -1,15 +1,43 @@
 import styles from "./Trangchu.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Login from "../Login/Login";
 import panner from "../../assets/img/panner.png";
 import Card from "../../components/Card/Card";
 import Navbar from "../../components/Navbar/Navbar";
 import { products } from "../data";
+// import axios from "axios";
 
 function Trangchu() {
   const [showModalLogin, setShowModalLogin] = useState(false);
+  const [stepCurrently, setStepCurrently] = useState(0);
+  const [listItemShowUp, setListItemShowUp] = useState(() => {
+    return products.filter((item, index) => {
+      return index <= 5;
+    });
+  });
+  const [disableNextBtn, setDisableNextBtn] = useState(false);
+  const limitTotalItem = 6;
+
   const handalShowModalLogin = () => {
     setShowModalLogin(!showModalLogin);
+  };
+
+  useEffect(() => {
+    if (products.length <= 6) {
+      setDisableNextBtn(true);
+    }
+    let getNewListItem = products.filter((item, index) => {
+      return (
+        index >= stepCurrently && index <= stepCurrently + limitTotalItem - 1
+      );
+    });
+    setListItemShowUp(getNewListItem);
+  }, [disableNextBtn, stepCurrently]);
+
+  console.log(`re-render`);
+  //handle load item
+  const handleLoadNextItem = () => {
+    setStepCurrently((prev) => prev + 6);
   };
   return (
     <div className={styles.wrapper}>
@@ -97,7 +125,7 @@ function Trangchu() {
             </div>
             <div className={styles["main-item"]}>
               {/* show item  */}
-              {products.map((item, index) => {
+              {listItemShowUp.map((item, index) => {
                 return (
                   <Card
                     key={index}
@@ -110,6 +138,13 @@ function Trangchu() {
                 );
               })}
             </div>
+            <button
+              disabled={disableNextBtn}
+              className={styles["btn_next"]}
+              onClick={handleLoadNextItem}
+            >
+              Next
+            </button>
           </div>
         </div>
       </div>

@@ -10,7 +10,7 @@ function Card({ id, nameItem, description, price, img }) {
         </div>
         <div className={styles["info-item"]}>
           <div className={styles["title-item"]}>
-            <span> {nameItem}</span>
+            <span>{nameItem}</span>
           </div>
           <p className={styles["decription-item"]}>{description}</p>
           <span className={styles["price-item"]}>{price}</span>

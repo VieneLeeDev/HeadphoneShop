@@ -56,6 +56,62 @@ const products = [
     price: 1550000,
     img: item_06,
   },
+  {
+    id: "7",
+    nameItem: "Gaming Logitech G435",
+    description:
+      "Đối với game thủ thì tai nghe gaming là một trong những thiết bị công nghệ được lựa chọn nhiều và được sự ưu ái đặc biệt bởi sự cần thiết và tiện ích của nó. Tai nghe gaming Logitech G435 là 1 sản phẩm hỗ trợ nâng cao trải nghiệm.",
+    price: 1550000,
+    img: item_06,
+  },
+  {
+    id: "8",
+    nameItem: "Gaming Logitech G435",
+    description:
+      "Đối với game thủ thì tai nghe gaming là một trong những thiết bị công nghệ được lựa chọn nhiều và được sự ưu ái đặc biệt bởi sự cần thiết và tiện ích của nó. Tai nghe gaming Logitech G435 là 1 sản phẩm hỗ trợ nâng cao trải nghiệm.",
+    price: 1550000,
+    img: item_06,
+  },
+  {
+    id: "9",
+    nameItem: "Gaming Logitech G435",
+    description:
+      "Đối với game thủ thì tai nghe gaming là một trong những thiết bị công nghệ được lựa chọn nhiều và được sự ưu ái đặc biệt bởi sự cần thiết và tiện ích của nó. Tai nghe gaming Logitech G435 là 1 sản phẩm hỗ trợ nâng cao trải nghiệm.",
+    price: 1550000,
+    img: item_06,
+  },
+  {
+    id: "10",
+    nameItem: "Gaming Logitech G435",
+    description:
+      "Đối với game thủ thì tai nghe gaming là một trong những thiết bị công nghệ được lựa chọn nhiều và được sự ưu ái đặc biệt bởi sự cần thiết và tiện ích của nó. Tai nghe gaming Logitech G435 là 1 sản phẩm hỗ trợ nâng cao trải nghiệm.",
+    price: 1550000,
+    img: item_06,
+  },
+  {
+    id: "11",
+    nameItem: "Gaming Logitech G435",
+    description:
+      "Đối với game thủ thì tai nghe gaming là một trong những thiết bị công nghệ được lựa chọn nhiều và được sự ưu ái đặc biệt bởi sự cần thiết và tiện ích của nó. Tai nghe gaming Logitech G435 là 1 sản phẩm hỗ trợ nâng cao trải nghiệm.",
+    price: 1550000,
+    img: item_06,
+  },
+  {
+    id: "12",
+    nameItem: "Gaming Logitech G435",
+    description:
+      "Đối với game thủ thì tai nghe gaming là một trong những thiết bị công nghệ được lựa chọn nhiều và được sự ưu ái đặc biệt bởi sự cần thiết và tiện ích của nó. Tai nghe gaming Logitech G435 là 1 sản phẩm hỗ trợ nâng cao trải nghiệm.",
+    price: 1550000,
+    img: item_06,
+  },
+  {
+    id: "13",
+    nameItem: "Gaming Logitech G435",
+    description:
+      "Đối với game thủ thì tai nghe gaming là một trong những thiết bị công nghệ được lựa chọn nhiều và được sự ưu ái đặc biệt bởi sự cần thiết và tiện ích của nó. Tai nghe gaming Logitech G435 là 1 sản phẩm hỗ trợ nâng cao trải nghiệm.",
+    price: 1550000,
+    img: item_06,
+  },
 ];
 
 const employess = [
