@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
 import AddnewEmployee from "../AddnewEmployee/AddnewEmployee";
 import axios from "axios";
-import { apiGetListEmployees } from "../axios/api";
+import { apiGetListEmployees } from "../../axios/api";
+import ModalUpdateEmployee from "../ModalUpdateEmployee/ModalUpdateEmployee";
 function Employee() {
   const [isAddNew, setIsAddNew] = useState(false);
   const [reLoad, setReLoad] = useState(false);
   const [employess, setEmployess] = useState([]);
   const [dataUpdate, setDataUpdate] = useState([]);
-
+  const [showModalEdit, setModalEdit] = useState(false);
+  const [scrollEnabled, setScrollEnabled] = useState(true);
   const reloadPage = () => {
     setReLoad(!reLoad);
   };
@@ -36,7 +38,11 @@ function Employee() {
       console.log(error);
     }
   };
-
+  // handle Edit
+  const handleEdit = () => {
+    setModalEdit(true);
+    setScrollEnabled(false);
+  };
   // GET ITEM NEED TO UPDATE
   const getEmployee = (id) => {
     try {
@@ -48,8 +54,15 @@ function Employee() {
   };
   return (
     <div>
+      {showModalEdit && <ModalUpdateEmployee />}
       {isAddNew ? (
-        <AddnewEmployee onClick={handleAddnew} valueUpdate={dataUpdate} />
+        <AddnewEmployee
+          onClick={() => {
+            handleAddnew();
+            reloadPage();
+          }}
+          valueUpdate={dataUpdate}
+        />
       ) : (
         <div className="px-5 py-3 ">
           <div className="d-flex justify-content-center">
@@ -66,7 +79,6 @@ function Employee() {
                   <th>Last Name</th>
                   <th>Avatar</th>
                   <th>Email</th>
-                  <th>Department</th>
                   <th>Gender</th>
                   <th>Phone</th>
                   <th>Action</th>
@@ -87,15 +99,12 @@ function Employee() {
                         />
                       </td>
                       <td> {person.email}</td>
-                      <td> {person.department}</td>
                       <td> {person.gender}</td>
-                      <td>{person.phoneNumber}</td>
+                      <td>{person.phone}</td>
                       <td>
                         <button
                           className="btn btn-primary btn-sm me-2"
-                          onClick={() => {
-                            getEmployee(person.id);
-                          }}
+                          onClick={handleEdit}
                         >
                           edit
                         </button>

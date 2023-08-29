@@ -12,7 +12,7 @@ function ModalUpdateEmployee() {
                 <h3 className="mb-4 pb-2 pb-md-0 mb-md-5">
                   Infomation Employee
                 </h3>
-                <form onSubmit={handleSubmit}>
+                <form>
                   <div className="row">
                     <div className="col-md-6 mb-4">
                       <div className="form-outline">

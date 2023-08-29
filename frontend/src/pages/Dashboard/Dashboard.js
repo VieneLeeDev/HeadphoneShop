@@ -19,10 +19,7 @@ function Dashboard() {
               id="menu"
             >
               <li className="nav-item">
-                <Link
-                  to="/"
-                  className="nav-link align-middle px-0 text-white"
-                >
+                <Link to="/" className="nav-link align-middle px-0 text-white">
                   <i className="fs-4 bi-house"></i>{" "}
                   <span className="ms-1 d-none d-sm-inline">Home</span>
                 </Link>

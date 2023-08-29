@@ -13,7 +13,7 @@ function Card({ id, nameItem, description, price, img }) {
             <span>{nameItem}</span>
           </div>
           <p className={styles["decription-item"]}>{description}</p>
-          <span className={styles["price-item"]}>{price}</span>
+          <span className={styles["price-item"]}>{`${price} VND`}</span>
         </div>
       </Link>
     </div>

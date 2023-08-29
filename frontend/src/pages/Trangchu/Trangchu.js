@@ -18,6 +18,8 @@ function Trangchu() {
   const [disableNextBtn, setDisableNextBtn] = useState(false);
   const limitTotalItem = 6;
 
+  console.log(listItemShowUp);
+
   const handalShowModalLogin = () => {
     setShowModalLogin(!showModalLogin);
   };
@@ -26,15 +28,16 @@ function Trangchu() {
     if (products.length <= 6) {
       setDisableNextBtn(true);
     }
-    let getNewListItem = products.filter((item, index) => {
-      return (
-        index >= stepCurrently && index <= stepCurrently + limitTotalItem - 1
-      );
-    });
-    setListItemShowUp(getNewListItem);
+    if (stepCurrently >= 1) {
+      let getNewListItem = products.filter((item, index) => {
+        return (
+          index >= stepCurrently && index <= stepCurrently + limitTotalItem - 1
+        );
+      });
+      setListItemShowUp(getNewListItem);
+    }
   }, [disableNextBtn, stepCurrently]);
 
-  console.log(`re-render`);
   //handle load item
   const handleLoadNextItem = () => {
     setStepCurrently((prev) => prev + 6);

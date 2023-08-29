@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
-import { apiGetListEmployees } from "../axios/api";
+import { apiGetListEmployees } from "../../axios/api";
 import axios from "axios";
 function AddnewEmployee({ onClick, valueUpdate }) {
-  const [checkFillForm, setCheckFillForm] = useState(false);
   const [employeePicked, setEmployeePicked] = useState({});
   const [formValue, setFormValue] = useState({
     firstName: "",
@@ -46,11 +45,6 @@ function AddnewEmployee({ onClick, valueUpdate }) {
     setEmployeePicked('');
     onClick();
   };
-
-  useEffect(() => {
-    console.log(checkFillForm);
-  }, [valueUpdate, employeePicked, checkFillForm]);
-
   return (
     <section className="vh-100 gradient-custom">
       <div className="container py-5 h-100">
