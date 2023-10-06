@@ -2,10 +2,10 @@ import styles from "./Trangchu.module.css";
 import { useEffect, useState } from "react";
 import Login from "../Login/Login";
 import panner from "../../assets/img/panner.png";
+import banner2 from "../../assets/img/banner2.jpg";
 import Card from "../../components/Card/Card";
 import Navbar from "../../components/Navbar/Navbar";
 import { products } from "../data";
-// import axios from "axios";
 
 function Trangchu() {
   const [showModalLogin, setShowModalLogin] = useState(false);
@@ -148,6 +148,31 @@ function Trangchu() {
             >
               Next
             </button>
+          </div>
+        </div>
+        <div className={styles["slider-content"]}>
+          <img src={banner2} alt="img item" />
+        </div>
+        <div className={styles["second-content"]}>
+          <div className={styles["main-second-content"]}>
+            <div className={styles["title-second-content"]}>
+              <span> Gaming Series </span>
+            </div>
+            <div className={styles["list-second-item"]}>
+              {/* show item  */}
+              {listItemShowUp.map((item, index) => {
+                return (
+                  <Card
+                    key={index}
+                    id={item.id}
+                    nameItem={item.nameItem}
+                    description={item.description}
+                    price={item.price}
+                    img={item.img}
+                  />
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

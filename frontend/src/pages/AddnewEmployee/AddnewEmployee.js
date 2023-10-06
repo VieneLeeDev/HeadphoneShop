@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { apiGetListEmployees } from "../../axios/api";
 import axios from "axios";
 function AddnewEmployee({ onClick, valueUpdate }) {
-  const [employeePicked, setEmployeePicked] = useState({});
   const [formValue, setFormValue] = useState({
     firstName: "",
     avatar: "",
@@ -42,7 +41,6 @@ function AddnewEmployee({ onClick, valueUpdate }) {
 
   // handle close form
   const handleClose = () => {
-    setEmployeePicked('');
     onClick();
   };
   return (

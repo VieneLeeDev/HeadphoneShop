@@ -7,9 +7,8 @@ function Employee() {
   const [isAddNew, setIsAddNew] = useState(false);
   const [reLoad, setReLoad] = useState(false);
   const [employess, setEmployess] = useState([]);
-  const [dataUpdate, setDataUpdate] = useState([]);
+  const [dataUpdate, setDataUpdate] = useState({});
   const [showModalEdit, setModalEdit] = useState(false);
-  const [scrollEnabled, setScrollEnabled] = useState(true);
   const reloadPage = () => {
     setReLoad(!reLoad);
   };
@@ -25,7 +24,7 @@ function Employee() {
         // Xử lý lỗi nếu có
         console.error(error);
       });
-  }, [reLoad, dataUpdate]);
+  }, [reLoad]);
   const handleAddnew = () => {
     setIsAddNew(!isAddNew);
   };
@@ -39,22 +38,24 @@ function Employee() {
     }
   };
   // handle Edit
-  const handleEdit = () => {
+  const handleEdit = (id) => {
     setModalEdit(true);
-    setScrollEnabled(false);
+    getEmployee(id);
   };
   // GET ITEM NEED TO UPDATE
   const getEmployee = (id) => {
-    try {
-      const filterId = employess.filter((person) => person.id === id);
-      setDataUpdate(filterId);
-    } catch (error) {
-      console.log(error);
-    }
+    const person = employess.find((person) => id === person.id);
+    setDataUpdate(person);
   };
+
   return (
     <div>
-      {showModalEdit && <ModalUpdateEmployee />}
+      {showModalEdit && (
+        <ModalUpdateEmployee
+          onClick={{ reloadPage, setModalEdit }}
+          dataUpdate={dataUpdate}
+        />
+      )}
       {isAddNew ? (
         <AddnewEmployee
           onClick={() => {
@@ -100,11 +101,13 @@ function Employee() {
                       </td>
                       <td> {person.email}</td>
                       <td> {person.gender}</td>
-                      <td>{person.phone}</td>
+                      <td>{person.phoneNumber}</td>
                       <td>
                         <button
                           className="btn btn-primary btn-sm me-2"
-                          onClick={handleEdit}
+                          onClick={() => {
+                            handleEdit(person.id);
+                          }}
                         >
                           edit
                         </button>

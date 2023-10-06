@@ -1,4 +1,18 @@
-function ModalUpdateEmployee() {
+import { useState } from "react";
+import axios from "axios";
+import { apiGetListEmployees } from "../../axios/api";
+function ModalUpdateEmployee({ dataUpdate, onClick }) {
+  const [newData, setNewData] = useState(dataUpdate);
+  const updateEmployee = async () => {
+    try {
+      await axios.put(`${apiGetListEmployees}/${newData.id}`, newData);
+      onClick.setModalEdit(false);
+      onClick.reloadPage();
+    } catch (error) {
+      console.log(error);
+    }
+    console.log(newData);
+  };
   return (
     <section className="vh-100 gradient-custom">
       <div className="container py-5 h-100">
@@ -23,6 +37,13 @@ function ModalUpdateEmployee() {
                           type="text"
                           id="firstName"
                           className="form-control form-control-lg"
+                          placeholder={`${dataUpdate.firstName}`}
+                          onChange={(e) =>
+                            setNewData((prev) => ({
+                              ...prev,
+                              firstName: e.target.value,
+                            }))
+                          }
                         />
                       </div>
                     </div>
@@ -35,27 +56,22 @@ function ModalUpdateEmployee() {
                           type="text"
                           id="lastName"
                           className="form-control form-control-lg"
+                          placeholder={`${dataUpdate.lastName}`}
+                          onChange={(e) =>
+                            setNewData((prev) => ({
+                              ...prev,
+                              lastName: e.target.value,
+                            }))
+                          }
                         />
                       </div>
                     </div>
                   </div>
 
                   <div className="row">
-                    <div className="col-md-6 mb-4 d-flex align-items-center">
-                      <div className="form-outline datepicker w-100">
-                        <label htmlFor="department" className="form-label">
-                          Department
-                        </label>
-                        <input
-                          type="text"
-                          className="form-control form-control-lg"
-                          id="department"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-md-6 mb-4">
+                    <div className=" mb-4">
                       <h6 className="mb-2 pb-1">Gender: </h6>
-                      <div className="form-check form-check-inline">
+                      <div className="form-check form-check-inline w-full">
                         <label
                           className="form-check-label"
                           htmlFor="femaleGender"
@@ -68,6 +84,12 @@ function ModalUpdateEmployee() {
                           name="gender"
                           id="femaleGender"
                           value="female"
+                          onChange={(e) =>
+                            setNewData((prev) => ({
+                              ...prev,
+                              gender: e.target.value,
+                            }))
+                          }
                         />
                       </div>
 
@@ -84,23 +106,35 @@ function ModalUpdateEmployee() {
                           name="gender"
                           id="maleGender"
                           value="Male"
+                          onChange={(e) =>
+                            setNewData((prev) => ({
+                              ...prev,
+                              gender: e.target.value,
+                            }))
+                          }
                         />
                       </div>
 
                       <div className="form-check form-check-inline">
+                        <label
+                          className="form-check-label"
+                          htmlFor="maleGender"
+                        >
+                          Other
+                        </label>
                         <input
                           className="form-check-input"
                           type="radio"
                           name="gender"
-                          id="otherGender"
-                          value="Other"
+                          id="maleGender"
+                          value="Orther"
+                          onChange={(e) =>
+                            setNewData((prev) => ({
+                              ...prev,
+                              gender: e.target.value,
+                            }))
+                          }
                         />
-                        <label
-                          className="form-check-label"
-                          htmlFor="otherGender"
-                        >
-                          Other
-                        </label>
                       </div>
                     </div>
                   </div>
@@ -115,6 +149,13 @@ function ModalUpdateEmployee() {
                           type="email"
                           id="email"
                           className="form-control form-control-lg"
+                          placeholder={`${dataUpdate.email}`}
+                          onChange={(e) =>
+                            setNewData((prev) => ({
+                              ...prev,
+                              email: e.target.value,
+                            }))
+                          }
                         />
                       </div>
                     </div>
@@ -127,6 +168,13 @@ function ModalUpdateEmployee() {
                           type="tel"
                           id="phoneNumber"
                           className="form-control form-control-lg"
+                          placeholder={`${dataUpdate.phoneNumber}`}
+                          onChange={(e) =>
+                            setNewData((prev) => ({
+                              ...prev,
+                              phoneNumber: e.target.value,
+                            }))
+                          }
                         />
                       </div>
                     </div>
@@ -142,19 +190,28 @@ function ModalUpdateEmployee() {
                             className="form-control"
                             type="text"
                             name="avatar"
+                            placeholder={`${dataUpdate.avatar}`}
+                            onChange={(e) =>
+                              setNewData((prev) => ({
+                                ...prev,
+                                avatar: e.target.value,
+                              }))
+                            }
                           />
                         </div>
                       </div>
                     </div>
                   </div>
                   <div className="container d-flex justify-content-between mt-4 pt-2 w-100">
-                    <button className="btn btn-primary btn-lg" type="submit">
+                    <button
+                      className="btn btn-primary btn-lg"
+                      type="button"
+                      onClick={updateEmployee}
+                    >
                       Submit
                     </button>
 
-                    <button
-                      className="btn btn-success btn-lg ml-20"
-                    >
+                    <button className="btn btn-success btn-lg ml-20">
                       {" "}
                       Close{" "}
                     </button>

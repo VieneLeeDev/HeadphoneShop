@@ -9,6 +9,7 @@
 .slider-content{
     background-color: #000002;
     display: flex;
+    flex:1;
     box-sizing: border-box;
     align-items: center;
     width: 100%;
@@ -59,6 +60,7 @@
     padding-top: 10px;
 }
 .checkbox-content {
+    display: flex;
     margin: 20px 0;
     list-style: none;
     align-items: baseline;
@@ -116,4 +118,25 @@
 .btn_next{
     margin: 0 auto;
     border: 1px solid #000002;
+}
+.second-content{
+    width: 80%;
+    margin: 30px auto;
+    border-radius:30px;
+    padding: 30px;
+    min-height: 500px;
+    background-color: #999999;
+}
+.title-second-content{
+    margin:30px 0;
+    border-bottom:1px solid black;
+}
+.second-content .title-second-content{
+    text-align: center;
+    font-size: x-large;
+    font-weight: bolder;
+}
+.list-second-item{
+    display: flex;
+    flex-wrap: wrap;
 }
